@@ -99,6 +99,10 @@ class LinkedListOperations {
 		 System.out.println("value is-->"+temp.getData());
 		 System.out.println("size is-->"+(counter+1));
 	 }
+	 
+	 public void reverse() {
+		 
+	 }
 	
 }
 
@@ -116,8 +120,9 @@ public class LinkedListImpl {
 		a.addFirst(10);
 		a.addLast(5);
 		a.addPos(12, 1);
+		
 		a.printAll();
-
+        a.reverse();
 	}
 
 }
