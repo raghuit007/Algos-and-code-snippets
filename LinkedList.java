@@ -78,7 +78,7 @@ class LinkedListOperations {
 		 else {
 			 int counter=0;
 			 Node temp = start;
-			 while(counter<pos) {
+			 while(counter<pos-1) {
 				 temp = temp.getNext();
 				 counter++;
 			 }
