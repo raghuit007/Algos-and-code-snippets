@@ -1,4 +1,30 @@
-
+/* write a program which outputs 2 numbers based on the following condition
+               
+                Input: Given a string and a String array
+               
+                ("ABC", ("first:ABC","second:DEF","second:HIJ","first:PQR","third:PQR","third:ASD","fourth:ASD","fourth:QWE"))
+               
+                the first string given is an itemid. In the string array, take an element first:ABC. The first part of this is a customer id and the second part
+               
+                is the item id. Here "first"->customer id
+                                     "ABC"->item id
+                 We need to build a recommendation algorithm based on what a customer buys. For example if customer "first" buys ABC and PQR, then ABC and PQR
+                 are strongly connected. If a custmer "first" buys PQR and another customer "three" also buys PQR,then
+                 whatever the other product the customer "third" buys (for example ASD) is weakly connected to the give itemId/
+                
+                 We need a count of how many items are strongly connected and weakly connected to the given itemId.
+                
+                 Example input:
+                 ("ABC", ("first:ABC","second:DEF","second:HIJ","first:PQR","third:PQR","third:ASD","fourth:ASD","fourth:QWE"))
+                
+                 Output : 1 , 2
+                
+                 explanation: ABC is the given itemid for which we need to find strong and weak connections.
+                
+                 ABC was bought by "first" who also bought "PQR". Hence it is a strong connections (therefore 1 item)
+                 "third" bought ASD and PQR. Since PQR is strongly connected to ABC, ASD is weakly connected.
+                 Also "fourht" bought ASD and QWE. Since ASD is weakly connected, QWE is also weakly connected to ABC.(total 2) */
+                 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
