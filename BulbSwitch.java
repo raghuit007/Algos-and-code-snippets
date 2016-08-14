@@ -9,21 +9,29 @@ For the nth round, you only toggle the last bulb. Find how many bulbs are on aft
 
 public class Solution {
     public int bulbSwitch(int n) {
-        boolean [] toggleState = new boolean[n];
-        toggleState[0]=true;
+        int inp =99;
+        
+		boolean [] toggleState = new boolean[inp+1];
+		int n = toggleState.length;
+       // toggleState[0]=true;
         int count=0;
-        for(int i=1;i<n;i++) {
-            
+        for(int i=1;i<n-1;i++) {
             int stepper=i;
             while(stepper<n) {
+            	//System.out.println(stepper);
             if(toggleState[stepper]==true) {
                 toggleState[stepper]=false;
-                stepper=stepper+i;
-            }
-            else {
+                
+                    stepper=stepper+i; 
+                }
+              
+             else {
                 toggleState[stepper]=true;
-                stepper=stepper+i;
-            }
+                
+                    stepper=stepper+i; 
+                
+                
+             }
             
            }
         }
@@ -34,11 +42,14 @@ public class Solution {
             toggleState[n-1]=true;
         }
         
-        for(int j=0;j<n;j++) {
+        for(int j=1;j<n;j++) {
             if(toggleState[j]==true) {
                 count++;
             }
         }
-      return count;  
+        System.out.println(count);
+      //return count;  
+	}
+
     }
 }
