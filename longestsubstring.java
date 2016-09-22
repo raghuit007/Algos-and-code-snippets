@@ -16,7 +16,7 @@ Note that the answer must be a substring, "pwke" is a subsequence and not a subs
 
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
-        // declare a hashset that has only uniques
+        // declare a linkedhashset(to retain insertion order) that has only uniques
         //parse thru the char array one by one
            //till you encounter a duplicate, keep inserting and increment the count
               // make that count as max
